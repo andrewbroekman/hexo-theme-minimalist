@@ -1,0 +1,31 @@
+<header id="header">
+  <nav class="navbar navbar-default navbar-fixed-top header-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="<%- url_for() %>" id="logo"><%= config.title %></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right hidden-xs social-icons">
+          <li class="social-icons-facebook"><a title="Facebook" target="_blank" href="https://www.facebook.com/andrewbroekman"><i class="fa fa-facebook"></i></a></li>
+          <li class="social-icons-twitter"><a title="Twitter" target="_blank" href="https://www.twitter.com/andrewbroekman"><i class="fa fa-twitter"></i></a></li>
+          <li class="social-icons-linkedin"><a title="Linkedin" target="_blank" href="https://www.linkedin.com/in/andrewbroekman"><i class="fa fa-linkedin"></i></a></li>
+          <% if (theme.rss){ %>
+          <li class="social-icons-rss"><a title="RSS Feed" target="_blank" href="<%- theme.rss %>"><i class="fa fa-rss"></i></a></li>
+          <% } %>
+        </ul>
+        <ul class="nav nav-pills navbar-right">
+          <% for (var i in theme.menu){ %>
+          <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+          <% } %>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <%- partial('_partial/page-header', {pagination: config.archive, index: true}) %>
+</header>

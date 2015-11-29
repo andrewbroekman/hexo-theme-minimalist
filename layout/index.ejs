@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="section-heading">
+            <h2>Latest <strong>Blog</strong> Posts</h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="featured-posts">
+        <% site.posts.sort('date', -1).limit(4).each(function(post){ %>
+        <div class="col-xs-4">
+            <div class="featured-post">
+                <div class="featured-post-content">
+                    <section class="post">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <%- partial('_partial/post/title', {post: post, index: true, class_name: 'article-title'}) %>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p><%- post.excerpt %></p>
+                                <div class="post-meta">
+                                    <%- partial('_partial/post/date', {post: post, class_name: 'archive-article-date', date_format: 'MMMM DD, YYYY'}) %>
+
+                                    <span><i class="fa fa-user"></i> By <a href="#"><%- config.author %></a> </span>
+                                    <%- partial('_partial/post/category', {post: post}) %>
+                                    <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+
+                                </div>
+                                <div>
+                                    <a class="btn btn-xs btn-primary pull-right" href="/">Read More</a>
+                                </div>
+                            <div class="col-xs-12">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>

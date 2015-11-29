@@ -1,0 +1,63 @@
+<% if (is_post()) { %>
+<main class="col-md-9">
+  <article id="<%= post.layout %>-<%= post.slug %>" class="post">
+    <header>
+      <%- partial('post/title', {class_name: 'article-title'}) %>
+      <%- partial('post/meta', {post: post}) %>
+    </header>
+    <div class="article-entry">
+      <% if (post.excerpt && index){ %>
+      <%- post.excerpt %>
+      <% if (theme.excerpt_link){ %>
+      <p class="article-more-link">
+        <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+      </p>
+      <% } %>
+      <% } else { %>
+      <%- post.content %>
+      <% } %>
+    </div>
+    <footer>
+      <div>
+        <h3> <i class="fa fa-share"></i> Share this post</h3>
+        <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='21689004'></div>
+        <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='3eed194550b07c87e91001ef26578094' data-cfasync='false' async='async'></script>
+      </div>
+      <div class="post-author">
+        <h3> <i class="fa fa-user"></i> Author</h3>
+        <div class="row">
+          <div class="col-md-2"><img src="<%- gravatar('andrew@andrewbroekman.com', 150) %>" class="img-thumbnail" alt="Some picture" width="150" height="150"></div>
+          <div class="col-md-9">
+            <p><strong>Andrew Broekman</strong></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim ornare nisi, vitae mattis nulla ante id dui. </p>
+          </div>
+        </div>
+      </div>
+      <% if (!index && post.comments && config.disqus_shortname){ %>
+      <div>
+        <h3> <i class="fa fa-comments"></i> Comments</h3>
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+      <% } %>
+    </footer>
+    <footer class="article-footer">
+      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
+      <% if (post.comments && config.disqus_shortname){ %>
+      <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
+      <% } %>
+      <%- partial('post/tag') %>
+    </footer>
+    <% if (!index){ %>
+    <%- partial('post/nav') %>
+    <% } %>
+  </article>
+</main>
+<% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+<%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+<% } %>
+<% } else { %>
+<main class="col-md-12">
+  <%- post.content %>
+</main>
+<% } %>

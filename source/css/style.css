@@ -1,0 +1,455 @@
+body {
+    background-color: #FFF;
+    color: #777;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+    padding-top: 72px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1d2127;
+    font-weight: 200;
+    letter-spacing: -1px;
+    margin: 0;
+}
+h1 {
+    font-size: 2.6em;
+    line-height: 44px;
+    margin: 0 0 32px;
+}
+h2 {
+    font-size: 2.2em;
+    font-weight: 300;
+    line-height: 42px;
+    margin: 0 0 32px;
+}
+h3 {
+    font-size: 1.8em;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin-bottom: 33px;
+    text-transform: uppercase;
+}
+h4 {
+    font-size: 1.4em;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 27px;
+    margin: 0 0 14px;
+}
+h5 {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 18px;
+    margin: 0 0 14px;
+    text-transform: uppercase;
+}
+h6 {
+    color: #333;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 18px;
+    margin: 0 0 14px;
+}
+
+hr {
+    background-image: linear-gradient(to right, transparent, #dbdbdb, transparent);
+    border: 0 none;
+    height: 1px;
+    margin: 22px 0;
+}
+
+p, small {
+    color: #777;
+    font-size: 100%;
+    line-height: 24px;
+    margin: 0 0 20px;
+}
+
+#footer {
+    background: #060606;
+    border-top: 4px solid #060606;
+    font-size: 0.9em;
+    margin-top: 40px;
+    padding: 30px 0 10px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+#header .header-navbar{
+    background: white;
+    border-top: 5px solid #ededed;
+    border-bottom: 1px solid #e9e9e9;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+}
+
+#header .header-navbar .nav-pills li a {
+    border-radius: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 10px 13px;
+    text-transform: uppercase;
+}
+
+#header .header-navbar .nav-pills a:hover{
+    background: #0088cc;
+    color: #fff;
+}
+
+#header .page-header {
+    background-color: #171717;
+    border-bottom: 5px solid #ccc;
+    border-top: 5px solid #384045;
+    margin: 0 0 35px;
+    min-height: 50px;
+    padding: 20px 0;
+    position: relative;
+    text-align: left;
+}
+
+#header .page-header .breadcrumb {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    margin: -3px 0 0;
+    padding: 0;
+}
+
+#header .page-header .breadcrumb > li {
+    text-shadow: none;
+}
+
+#header .page-header .breadcrumb.breadcrumb-valign-mid {
+    position: absolute;
+    right: 20px;
+    top: 40%;
+}
+
+#header .page-header h1 {
+    border-bottom: 5px solid #0088cc;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.6em;
+    font-weight: 200;
+    line-height: 46px;
+    margin: 0 0 -25px;
+    min-height: 37px;
+    padding: 0 0 17px;
+    position: relative;
+}
+
+#header .page-header h1 span {
+    color: #999da3;
+    display: block;
+    font-size: 0.6em;
+    font-weight: 300;
+    margin: -10px 0 0;
+}
+
+#scroll-to-top {
+    background: #404040 none repeat scroll 0 0;
+    border-radius: 7px 7px 0 0;
+    bottom: 0;
+    color: #fff;
+    display: none;
+    height: 9px;
+    min-width: 49px;
+    opacity: 0;
+    padding: 13px 10px 35px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    z-index: 1040;
+}
+#scroll-to-top:hover {
+    opacity: 1;
+}
+#scroll-to-top.visible {
+    opacity: 0.75;
+}
+#scroll-to-top span {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.blog-posts .post {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+}
+
+.featured-post {
+    background: transparent linear-gradient(to bottom, #fff 1%, #fcfcfc 98%) repeat scroll 0 0;
+    border-bottom: 1px solid #dfdfdf;
+    border-left: 1px solid #ececec;
+    border-radius: 8px;
+    border-right: 1px solid #ececec;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    margin: 20px auto;
+    min-height: 100px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.featured-post h3 a {
+    color: #1d2127;
+}
+
+.featured-post .featured-post-content {
+    border-radius: 8px;
+    border-top: 4px solid #0088cc;
+    padding: 30px 30px 10px;
+    position: relative;
+    top: -1px;
+}
+.featured-post .learn-more {
+    display: block;
+    margin-top: 10px;
+}
+
+.page-not-found {
+    margin: 50px 0;
+}
+
+.page-not-found h2 {
+    font-size: 140px;
+    font-weight: 600;
+    letter-spacing: -10px;
+    line-height: 140px;
+}
+
+.page-not-found h4 {
+    color: #777;
+}
+
+.page-not-found p {
+    font-size: 1.4em;
+    line-height: 36px;
+}
+
+.post header {
+    margin-bottom: 20px;
+}
+
+.post header h2 {
+    margin-bottom: 5px;
+}
+
+.post footer > div {
+    border-top: 1px solid #ddd;
+    margin: 15px 0 0;
+    padding: 20px 0 15px;
+}
+
+.post footer > div h3  {
+    color: #0088cc;
+    font-size: 1.8em;
+    font-weight: 200;
+    line-height: 22px;
+}
+
+.post footer p > strong {
+    color: #0088cc
+}
+
+.post .post-author p {
+    font-size: 0.9em;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.post .post-meta span {
+    font-size: 0.9em;
+    padding: 0 8px 0 0;
+}
+
+.post .post-meta span i {
+    margin: 0 4px 0 0;
+}
+
+.section-heading:before {
+    border-top: 1px solid #dbdbdb;
+    content: "";
+    height: 0;
+    left: auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 100%;
+}
+
+.section-heading, .section-heading a {
+    color: #1d2127;
+    text-align: center;
+    position: relative;
+    margin: 0 0 25px;
+}
+
+.section-heading h2 {
+    background: #fff;
+    display: inline-block;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+}
+
+.sidebar .widget h4 {
+    color: #0088cc;
+}
+
+.sidebar .widget .nav-list li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.sidebar .widget .nav-list li:last-child a {
+    border-bottom: medium none;
+}
+
+.sidebar .widget .nav-list li a::before {
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #333;
+    border-top: 4px solid transparent;
+    content: "";
+    display: inline-block;
+    height: 0;
+    margin-left: 10px;
+    margin-right: 5px;
+    position: relative;
+    width: 0;
+}
+
+.sidebar .widget .nav-list li a {
+    border-bottom: 1px solid #ededde;
+    color: #666;
+    display: block;
+    font-size: 0.9em;
+    padding: 8px 0;
+    text-decoration: none;
+    transition: background 0.1s ease 0s;
+}
+
+.social-icons {
+    margin: 5px 8px;
+}
+
+.social-icons li {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    margin: 0 2px;
+}
+
+.social-icons li a {
+    background: white;
+    border-radius: 100%;
+    color: #333 !important;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+    width: 30px;
+    padding: 0;
+    transition: all 0.2s ease 0s;
+}
+
+.social-icons li:hover a {
+    background: #171717 none repeat scroll 0 0;
+    color: #fff !important;
+}
+
+.social-icons li.social-icons-twitter:hover a {
+    background: #1aa9e1 none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-facebook:hover a {
+    background: #3b5a9a none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-linkedin:hover a {
+    background: #0073b2 none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-rss:hover a {
+    background: #ff8201 none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-googleplus:hover a {
+    background: #dd4b39 none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-pinterest:hover a {
+    background: #cc2127 none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-youtube:hover a {
+    background: #c3191e none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-instagram:hover a {
+    background: #7c4a3a none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-skype:hover a {
+    background: #00b0f6 none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-email:hover a {
+    background: #dd4b39 none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-vk:hover a {
+    background: #6383a8 none repeat scroll 0 0;
+}
+
+.social-icons li.social-icons-xing:hover a {
+    background: #1a7576 none repeat scroll 0 0;
+}
+.social-icons li.social-icons-tumblr:hover a {
+    background: #304e6c none repeat scroll 0 0;
+}
+.social-icons li.social-icons-reddit:hover a {
+    background: #ff4107 none repeat scroll 0 0;
+}
+.social-icons.social-icons-transparent li {
+    box-shadow: none;
+}
+.social-icons.social-icons-transparent li a {
+    background: transparent none repeat scroll 0 0;
+}
+.social-icons.social-icons-icon-light li a i {
+    color: #fff;
+}
+
+.primary-heading {
+    margin: 0;
+}
+
+.subtitle-heading {
+    color: #0088cc;
+}
+
+.tail {
+    margin: 44px 0;
+}
+
+
+

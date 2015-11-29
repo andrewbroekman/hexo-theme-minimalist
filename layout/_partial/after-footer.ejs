@@ -1,0 +1,29 @@
+<!-- Vendor -->
+<!-- build:js js/site.min.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<% if (is_post() && config.disqus_shortname){ %>
+<script>
+  var disqus_shortname = '<%= config.disqus_shortname %>';
+  <% if (page.permalink){ %>
+  var disqus_url = '<%= page.permalink %>';
+  <% } %>
+
+  var disqus_config = function () {
+    this.page.url = "<%- page.permalink %>";
+    this.page.identifier = "<%- page.path %>";
+  };
+  (function() {  // DON'T EDIT BELOW THIS LINE
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', + new Date());
+    (document.head || document.body).appendChild(s);
+  })();
+</script>
+<% } %>

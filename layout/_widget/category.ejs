@@ -1,0 +1,21 @@
+<% if (site.categories.length){ %>
+<aside class="widget">
+  <div class="row">
+    <header class="col-xs-12">
+      <h4>Categories</h4>
+    </header>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-list">
+        <% site.categories.sort('date', -1).limit(5).each(function(category){ %>
+        <li>
+          <a href="<%- url_for(category.path) %>"><%= category.name || '(no title)' %> <span class="badge">(<%- category.length%>)</span></a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</aside>
+<hr/>
+<% } %>

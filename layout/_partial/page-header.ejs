@@ -1,0 +1,55 @@
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="breadcrumb">
+                    <li><a href="<%- url_for() %>">Home</a></li>
+                    <% if (is_post()){ %>
+                    <li class="active">Blog</li>
+                    <% } else if (is_archive() && !(is_month() || is_year())) { %>
+                    <li class="active">Archives</li>
+                    <% } else if (is_archive() && (is_month() || is_year())) { %>
+                    <li><a href="<%- url_for("archives") %>">Archives</a></li>
+                    <li class="active"><%
+                            var title = "";
+                            if (is_month()) {
+                                title += ": " + page.year + '/' + page.month;
+                            } else if (is_year()) {
+                                title = page.year;
+                            }
+                        %>
+                        <%= title %>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <%
+                var title = "";
+                if (is_post()) {
+                    title = page.title;
+                } else if (is_archive()) {
+                    title = "Archives";
+
+                    if (is_month()) {
+                        title += ": " + page.year + '/' + page.month;
+                    } else if (is_year()) {
+                        title += ": " + page.year;
+                    }
+                } else if (is_category()) {
+                    title = 'Category: ' + page.category;
+                } else if (is_tag()) {
+                    title = 'Tag: ' + page.tag;
+                } else if (is_page()) {
+                    title = "Pages";
+                } else if (is_home()) {
+                    title = config.title
+                } else if (is_category())
+                %>
+                <h1><%= title %></h1>
+            </div>
+        </div>
+    </div>
+</div>

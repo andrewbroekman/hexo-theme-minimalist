@@ -1,0 +1,14 @@
+<article class="post">
+  <div class="row">
+    <div class="col-md-12">
+      <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+      <%- post.excerpt %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%- partial('post/meta', {post: post}) %>
+      <a class="btn btn-primary pull-right" href="/"><%= theme.excerpt_link %></a>
+    </div>
+  </div>
+</article>
